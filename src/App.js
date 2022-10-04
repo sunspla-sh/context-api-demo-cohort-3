@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import CompA from './components/CompA';
+
+import { useState } from 'react';
 
 function App() {
+
+  const [message, setMessage] = useState('HEY FROM APP');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hey from App</h1>
+      <CompA message={message} setMessage={setMessage} />
     </div>
   );
 }
